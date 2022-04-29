@@ -413,6 +413,81 @@ ul {
   font-size: 2.5rem;
 }
 
+#container {
+ 
+  background: #000;
+}
+
+.center {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+
+.el-st {
+  color: #eee;
+  font-size: 50px;
+  font-weight:bold;
+  letter-spacing: 4px;
+}
+
+.el-sp.is-changing {
+  animation: changing 0.1s infinite;
+}
+
+.el-sp {
+  transition: all 0.1s;
+  text-shadow: 0 0 10px #008f11;
+  position: relative;
+  will-change: transform, opacity;
+}
+
+.el-sp:after {
+  content:attr(data-txt);
+  color:#eee;
+  position: absolute;
+  top: 0;
+  left:0;
+  opacity:0;
+  will-change: transform, opacity;
+}
+
+.el-sp.is-changing:after {
+  animation: changingAfter 0.4s infinite alternate;
+}
+
+.scroll {
+  margin-top: 40px;
+  color:#008f11;
+  display: inline-block;
+  padding-bottom: 3px; 
+  padding-right: 40px;
+  position: relative;
+}
+
+
+
+@keyframes changing {
+  0% {opacity:1;}
+  50% {opacity:0.5;}
+  100% {opacity:1;}
+}
+
+@keyframes changingAfter {
+  0% {opacity:0.3;transform:translateX(10px) scaleX(2)}
+  50% {opacity:0;transform:translateX(0) scaleX(2)}
+  100% {opacity:0.3;transform:translateX(-10px) scaleX(2)}
+}
+
+@keyframes dots {
+  0% {content:''}
+  25% {content:'.'}
+  50% {content:'..'}
+  75% {content:'...'}
+}
+
 /*
 *
 * =====================
@@ -463,6 +538,10 @@ ul {
 .reference {
   margin-bottom: 30px;
   overflow: hidden;
+}
+.reference img {
+  height: 150px;
+  width: 250px;
 }
 
 @media (max-width: 767.98px) {
@@ -575,7 +654,12 @@ ul {
 */
 .customers-section img {
   padding: 10px;
-  max-width: 80px;
+  max-width: 130px;
+
+}
+.row{
+  display:flex;
+  justify-content: space-around;
 }
 
 /*
