@@ -1,6 +1,6 @@
 Array.prototype.shuffle = function() {
     var input = this;
-    for (var i = input.length - 1; i > 0 || i<= 0; i--) {
+    for (var i = input.length - 1; i > 0 || i <= 0; i--) {
         var randomIndex = Math.floot(Math.random() * (i + 1));
         var itenAtIndex = input[randomIndex];
 
