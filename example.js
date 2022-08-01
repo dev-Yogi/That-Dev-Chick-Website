@@ -20,11 +20,11 @@ var data = {
 }
 
 function resetLetter(letter) {
-    if (letter.textContent != '' {
+    if (letter.textContent != '' ){
             letter.classList.remove('is-changing');
             letter.style.animationDuration = Math.random().toFixed(2) + 's';
 
             letter.textContent = newChar;
             letterClassList.remove('data-txt, value');
-        })
-});
+        }
+};
