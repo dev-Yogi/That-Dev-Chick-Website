@@ -207,15 +207,17 @@ nav.navbar a.nav-link.active, nav.navbar a.nav-link:hover {
 *
 */
 
-#some-skills{
-  display: none;
-}
-
 @media (min-width: 992px) {
   #some-skills{
     display: block;
   }
 }
+
+#some-skills{
+  display: none;
+}
+
+
 .about-section .skill-item {
   margin-bottom: 20px;
 }
